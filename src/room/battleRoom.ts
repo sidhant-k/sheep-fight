@@ -518,36 +518,36 @@ export class battleRoom extends Room<State> {
         })
     }
 
-    async onAuth(client: Client, options: any) {
-        console.log("on auth user id->", options["userId"]);
-        if (options["userId"]) {
-            try {
-                let userData = "asnbkjdasb";
-                // let response = await axios.get(`${url.getBattleDataUrl}${this.roomId}`)
-                // //console.log("userData -->>", response.data);
-                // let users = response.data.result.players;
-                // for (let index = 0; index < users.length; index++) {
-                //     if (options["userId"] == users[index].id) {
-                //         //console.log("userId found in auth-->", users[index].id);
-                //         userData = users[index];
-                //     }
-                // }
-                // if (userData) {
-                //     return users;
-                // }
-                // else {
-                //     return false;
-                // }
-            } catch (error) {
-                throw new ServerError(500, 'Something went wrong!');
-            }
-        }
-        else {
-            throw new ServerError(400, "no userId provided");
-        }
-    }
+    // async onAuth(client: Client, options: any) {
+    //     console.log("on auth user id->", options["userId"]);
+    //     if (options["userId"]) {
+    //         try {
+    //             let userData = "asnbkjdasb";
+    //             // let response = await axios.get(`${url.getBattleDataUrl}${this.roomId}`)
+    //             // //console.log("userData -->>", response.data);
+    //             // let users = response.data.result.players;
+    //             // for (let index = 0; index < users.length; index++) {
+    //             //     if (options["userId"] == users[index].id) {
+    //             //         //console.log("userId found in auth-->", users[index].id);
+    //             //         userData = users[index];
+    //             //     }
+    //             // }
+    //             // if (userData) {
+    //             //     return users;
+    //             // }
+    //             // else {
+    //             //     return false;
+    //             // }
+    //         } catch (error) {
+    //             throw new ServerError(500, 'Something went wrong!');
+    //         }
+    //     }
+    //     else {
+    //         throw new ServerError(400, "no userId provided");
+    //     }
+    // }
 
-    onJoin(client: Client, options: any, auth: any) {
+    onJoin(client: Client, options: any) {
         //console.log("auth->", auth);
         console.log("JOINED GAME ROOM:", client.sessionId, "on roomId: ", this.roomId);
         try {
