@@ -522,22 +522,22 @@ export class battleRoom extends Room<State> {
         console.log("on auth user id->", options["userId"]);
         if (options["userId"]) {
             try {
-                let userData;
-                let response = await axios.get(`${url.getBattleDataUrl}${this.roomId}`)
-                //console.log("userData -->>", response.data);
-                let users = response.data.result.players;
-                for (let index = 0; index < users.length; index++) {
-                    if (options["userId"] == users[index].id) {
-                        //console.log("userId found in auth-->", users[index].id);
-                        userData = users[index];
-                    }
-                }
-                if (userData) {
-                    return users;
-                }
-                else {
-                    return false;
-                }
+                let userData = "asnbkjdasb";
+                // let response = await axios.get(`${url.getBattleDataUrl}${this.roomId}`)
+                // //console.log("userData -->>", response.data);
+                // let users = response.data.result.players;
+                // for (let index = 0; index < users.length; index++) {
+                //     if (options["userId"] == users[index].id) {
+                //         //console.log("userId found in auth-->", users[index].id);
+                //         userData = users[index];
+                //     }
+                // }
+                // if (userData) {
+                //     return users;
+                // }
+                // else {
+                //     return false;
+                // }
             } catch (error) {
                 throw new ServerError(500, 'Something went wrong!');
             }
@@ -563,7 +563,7 @@ export class battleRoom extends Room<State> {
             if (this.clients.length == this.maxClients) {
                 //console.log("battle data-->>",JSON.stringify(response.data));
                 let payload = {
-                    battleData: auth,
+                    battleData: "kjsbkjfhg",
                 }
                 //this.broadcast(events.joinGame, payload);
 
